@@ -16,8 +16,6 @@ class Settings extends Model
 
     protected array $rememberableKeys = ['id'];
 
-    protected $casts = ['enabled' => 'boolean'];
-
     public static function current()
     {
         return self::cacheGet(1)
@@ -27,5 +25,12 @@ class Settings extends Model
     public static function enabled()
     {
         return self::current()->enabled;
+    }
+
+    protected function casts(): array
+    {
+        return [
+            'enabled' => 'boolean',
+        ];
     }
 }
