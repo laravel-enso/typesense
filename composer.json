@@ -1,7 +1,7 @@
 {
     "name": "laravel-enso/typesense",
     "type": "library",
-    "description": "typesense integration",
+    "description": "Typesense integration settings for Laravel Enso Scout search",
     "authors": [
         {
             "name": "Adrian Ocneanu",
@@ -23,7 +23,7 @@
         }
     ],
     "keywords": [],
-    "homepage": "https://www.laravel-enso.com",
+    "homepage": "https://github.com/laravel-enso/typesense",
     "require": {
         "http-interop/http-factory-guzzle": "^1.2",
         "laravel/scout": "^11.0",
