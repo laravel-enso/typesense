@@ -4,11 +4,11 @@ namespace LaravelEnso\Typesense\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
-use LaravelEnso\Rememberable\Traits\Rememberable;
+use Illuminate\Support\Facades\Config;
 
 class Settings extends Model
 {
-    use HasFactory, Rememberable;
+    use HasFactory;
 
     protected $table = 'typesense_settings';
 
@@ -18,7 +18,7 @@ class Settings extends Model
 
     public static function current()
     {
-        return self::cacheGet(1)
+        return Config::get('enso.typesense.settingsId')
             ?? self::factory()->create();
     }
 
