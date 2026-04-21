@@ -18,7 +18,7 @@ class Settings extends Model
 
     public static function current()
     {
-        return Config::get('enso.typesense.settingsId')
+        return self::find(Config::get('enso.typesense.settingsId'))
             ?? self::factory()->create();
     }
 
