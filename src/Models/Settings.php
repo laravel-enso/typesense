@@ -18,7 +18,7 @@ class Settings extends Model
 
     protected array $rememberableKeys = ['id'];
 
-    public static function current()
+    public static function current(): self
     {
         $id = Config::get('enso.typesense.settingsId');
 
